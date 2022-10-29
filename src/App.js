@@ -1,12 +1,12 @@
 // import logo from './logo.svg';
-import rec_logo from './img/logo.png'
+import rec_logo from './img/rec_logo.png'
 import './App.css';
 
 function App() {
   return (
     <div className="bg-[#dd6612] h-screen w-screen flex flex-col items-center ">
       <div className="my-auto flex flex-col items-center ">
-        <img src={rec_logo} alt="logo" className=" sm:w-[400px] sm:h-[420px] w-[200px] h-[200px]" />
+        <img src={rec_logo} alt="logo" className=" sm:w-[400px] sm:h-[420px] w-[200px] h-[200px] animate-bounce" />
         <p className="sm:text-3xl font-extrabold sm:mt-[32px] sm:w-[296px] mt-[24px] w-[312px] text-[28px] text-center"> WEBSITE IS UNDER DEVELOPMENT</p>
         <p className="sm:text-sm font-normal sm:mt-[32px] sm:w-[360px] mt-[24px] w-[320px] text-[12px] text-center"> If you have cardboard boxes, aluminum cans or (unused) plastic bottles you want to sell, please contact us +84 8 2525 1567</p>
         {/* <button
