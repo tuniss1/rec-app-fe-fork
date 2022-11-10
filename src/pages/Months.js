@@ -71,7 +71,7 @@ export const Months = () => {
                             {arr.map(i => {
                                 // console.log(i.length >= 10 ? i.id : `0${i.id}`)
                                 return (
-                                    <a className="w-[100px] h-[100px] md:w-[140px] md:h-[140px] flex items-center justify-center flex-col py-2 px-4 bg-transparent mr-2 mt-2 text-red-600 font-semibold border border-red-600 rounded hover:bg-red-600 hover:text-white hover:border-transparent transition ease-in duration-200 transform hover:-translate-y-1 active:translate-y-0 "
+                                    <a className=" w-[90px] h-[90px] sm:w-[100px] sm:h-[100px] md:w-[140px] md:h-[140px] flex items-center justify-center flex-col sm:py-2 px-2 sm:px-4 bg-transparent mr-1 sm:mr-2 mt-2 text-red-600 font-semibold border border-red-600 rounded hover:bg-red-600 hover:text-white hover:border-transparent transition ease-in duration-200 transform hover:-translate-y-1 active:translate-y-0 "
                                         // to={`${match.url}/${i.id}`}
                                         href={`https://firebasestorage.googleapis.com/v0/b/rec-app-803db.appspot.com/o/rec%2FBusiness-Result-${i.id >= 10 ? i.id : `0${i.id}`}-2022.pdf?alt=media&token=95ece86a-0137-496b-b5f0-cbd3a603dfbc`}
                                     >
