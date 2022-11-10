@@ -3,13 +3,10 @@ import {
   BrowserRouter as Router,
   Switch,
   Route,
-  Link,
-  useRouteMatch,
   useParams
 } from "react-router-dom";
 
 import HomePage from "./pages/HomePage";
-import List from "./pages/List";
 import { Months } from "./pages/Months";
 
 function App() {
