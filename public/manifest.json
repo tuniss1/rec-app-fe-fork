@@ -1,9 +1,9 @@
 {
-  "short_name": "Rec_Industrial",
-  "name": "Create React App Sample",
+  "short_name": "Maycha",
+  "name": "Maycha",
   "icons": [
     {
-      "src": "favicon.ico",
+      "src": "maycha.ico",
       "sizes": "64x64 32x32 24x24 16x16",
       "type": "image/x-icon"
     }
