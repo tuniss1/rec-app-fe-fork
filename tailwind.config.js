@@ -6,6 +6,10 @@ module.exports = {
   theme: {
     extend: {
       animation: {
+      },
+      screens: {
+        'mobile': '375px',
+        'medium-mobile': '412px'
       }
     },
 

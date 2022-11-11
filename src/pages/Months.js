@@ -65,22 +65,29 @@ export const Months = () => {
                     <Topic />
                 </Route> */}
                 <Route path={`${match.path}`}>
-                    <h2 className="mb-4 text-3xl font-extrabold text-red-600 m-auto mt-4 w-[300px] text-center">MAYCHA BUSINESS RESULT</h2>
-                    <div className="flex flex-col p-8 w-screen">
-                        <div className=" mx-auto flex row flex-wrap items-center items-start md:justify-center">
+                    <h2 className="text-3xl my-4 md:my-8 md:text-5xl font-extrabold text-red-600 m-auto mt-4 w-[300px] md:w-[460px] text-center">MAYCHA BUSINESS RESULT</h2>
+
+                    <div className=" mx-auto flex row flex-wrap items-center justify-center mobile:w-[363px] medium-mobile:w-[393px] mobile:mx-auto h-fit sm:w-[80%] sm:items-start md:justify-start">
                             {arr.map(i => {
                                 // console.log(i.length >= 10 ? i.id : `0${i.id}`)
-                                return (
-                                    <a className=" w-[90px] h-[90px] sm:w-[100px] sm:h-[100px] md:w-[140px] md:h-[140px] flex items-center justify-center flex-col sm:py-2 px-2 sm:px-4 bg-transparent mr-1 sm:mr-2 mt-2 text-red-600 font-semibold border border-red-600 rounded hover:bg-red-600 hover:text-white hover:border-transparent transition ease-in duration-200 transform hover:-translate-y-1 active:translate-y-0 "
-                                        // to={`${match.url}/${i.id}`}
-                                        href={`https://firebasestorage.googleapis.com/v0/b/rec-app-803db.appspot.com/o/rec%2FBusiness-Result-${i.id >= 10 ? i.id : `0${i.id}`}-2022.pdf?alt=media&token=95ece86a-0137-496b-b5f0-cbd3a603dfbc`}
-                                    >
-                                        <p className=" w-[72px]">Tháng {i.id}</p>
-                                        <p>2022</p>
-                                    </a>
-                                )
+                                if (i.id <= 11) {
+                                    return (
+                                        <a className=" mobile:w-[120px] mobile:h-[120px] medium-mobile:w-[130px] medium-mobile:h-[130px] md:w-[140px] md:h-[140px] flex items-center justify-center flex-col sm:py-2 px-2 sm:px-4 text-center bg-transparent mr-0 mt-0 font-semibold border-black border-[1px] rounded-lg bg-red-600 text-white hover:border-transparent transition ease-in duration-200 transform hover:-translate-y-1 active:translate-y-0 "
+                                            href={`https://firebasestorage.googleapis.com/v0/b/rec-app-803db.appspot.com/o/rec%2FBusiness-Result-${i.id >= 10 ? i.id : `0${i.id}`}-2022.pdf?alt=media&token=95ece86a-0137-496b-b5f0-cbd3a603dfbc`}
+                                        >
+                                            <p className=" w-full">Tháng {i.id}</p>
+                                            <p>2022</p>
+                                        </a>
+                                    )
+                                }
+                                return (<a className=" mobile:w-[120px] mobile:h-[120px] medium-mobile:w-[130px] medium-mobile:h-[130px] md:w-[140px] md:h-[140px] flex items-center justify-center flex-col sm:py-2 px-2 sm:px-4 text-center bg-transparent mr-0 mt-0 font-semibold border-black border-[1px] rounded-lg bg-slate-50 text-gray-300 hover:border-transparent transition ease-in duration-200 transform hover:-translate-y-1 active:translate-y-0 "
+                                    href={`/months`}
+                                >
+                                    <p className=" w-full">Tháng {i.id <= 12 ? i.id : i.id % 12}</p>
+                                    <p>{i.id === 12 ? 2022 : 2023}</p>
+                                </a>)
+
                             })}
-                        </div>
                     </div>
                 </Route>
             </Switch>
