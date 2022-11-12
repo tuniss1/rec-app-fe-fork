@@ -13,12 +13,12 @@ function App() {
   return (
     <Router>
       <Switch>
-        {/* <Route exact path="/">
-          <HomePage />
-        </Route> */}
-        <Route path="/list">
-          <div>Hello</div>
+        <Route exact path="/">
+          <Months />
         </Route>
+        {/* <Route path="/list">
+          <div>Hello</div>
+        </Route> */}
         <Route path="/topics">
           <Months />
         </Route>
