@@ -6,23 +6,23 @@ import {
   useParams
 } from "react-router-dom";
 
-import HomePage from "./pages/HomePage";
+// import HomePage from "./pages/HomePage";
 import { Months } from "./pages/Months";
 
 function App() {
   return (
     <Router>
       <Switch>
-        <Route exact path="/">
+        {/* <Route exact path="/">
           <HomePage />
-        </Route>
+        </Route> */}
         <Route path="/list">
           <div>Hello</div>
         </Route>
         <Route path="/topics">
           <Months />
         </Route>
-        <Route path="/months" >
+        <Route path="/" >
           <Months />
         </Route>
       </Switch>
