@@ -65,14 +65,14 @@ export const Months = () => {
                     <Topic />
                 </Route> */}
                 <Route path={`${match.path}`}>
-                    <h2 className="text-3xl my-4 md:my-8 md:text-5xl font-extrabold text-red-600 m-auto mt-4 w-[300px] md:w-[460px] text-center">MAYCHA BUSINESS RESULT</h2>
+                    <h2 className="text-3xl my-4 md:my-8 md:text-5xl font-extrabold text-red-600 m-auto mt-4 w-[300px] md:w-[460px] text-center">MAYCHA <br></br> BUSINESS RESULT</h2>
 
-                    <div className=" mx-auto flex row flex-wrap items-center justify-center mobile:w-[363px] medium-mobile:w-[393px] mobile:mx-auto h-fit sm:w-[80%] sm:items-start md:justify-start">
+                    <div className=" mx-auto flex row flex-wrap items-center justify-center mobile:w-[381px] medium-mobile:w-[393px] mobile:mx-auto h-fit sm:w-[80%] sm:items-start md:justify-start">
                             {arr.map(i => {
                                 // console.log(i.length >= 10 ? i.id : `0${i.id}`)
                                 if (i.id <= 11) {
                                     return (
-                                        <a className=" mobile:w-[120px] mobile:h-[120px] medium-mobile:w-[130px] medium-mobile:h-[130px] md:w-[140px] md:h-[140px] flex items-center justify-center flex-col sm:py-2 px-2 sm:px-4 text-center bg-transparent mr-0 mt-0 font-semibold border-black border-[1px] rounded-lg bg-red-600 text-white hover:border-transparent transition ease-in duration-200 transform hover:-translate-y-1 active:translate-y-0 "
+                                        <a className=" mobile:w-[126px] mobile:h-[126px] medium-mobile:w-[130px] medium-mobile:h-[130px] md:w-[140px] md:h-[140px] flex items-center justify-center flex-col sm:py-2 px-2 sm:px-4 text-center bg-transparent mr-0 mt-0 font-bold border-black border-[1px] rounded-lg bg-red-600 text-white hover:border-transparent transition ease-in duration-200 transform hover:-translate-y-1 active:translate-y-0 "
                                             href={`https://firebasestorage.googleapis.com/v0/b/rec-app-803db.appspot.com/o/rec%2FBusiness-Result-${i.id >= 10 ? i.id : `0${i.id}`}-2022.pdf?alt=media&token=95ece86a-0137-496b-b5f0-cbd3a603dfbc`}
                                         >
                                             <p className=" w-full">Tháng {i.id}</p>
@@ -80,7 +80,7 @@ export const Months = () => {
                                         </a>
                                     )
                                 }
-                                return (<a className=" mobile:w-[120px] mobile:h-[120px] medium-mobile:w-[130px] medium-mobile:h-[130px] md:w-[140px] md:h-[140px] flex items-center justify-center flex-col sm:py-2 px-2 sm:px-4 text-center bg-transparent mr-0 mt-0 font-semibold border-black border-[1px] rounded-lg bg-slate-50 text-gray-300 hover:border-transparent transition ease-in duration-200 transform hover:-translate-y-1 active:translate-y-0 "
+                                return (<a className=" mobile:w-[126px] mobile:h-[126px] medium-mobile:w-[130px] medium-mobile:h-[130px] md:w-[140px] md:h-[140px] flex items-center justify-center flex-col sm:py-2 px-2 sm:px-4 text-center bg-transparent mr-0 mt-0 font-bold border-black border-[1px] rounded-lg bg-slate-50 text-gray-300 hover:border-transparent transition ease-in duration-200 transform hover:-translate-y-1 active:translate-y-0 "
                                     href={`/months`}
                                 >
                                     <p className=" w-full">Tháng {i.id <= 12 ? i.id : i.id % 12}</p>
