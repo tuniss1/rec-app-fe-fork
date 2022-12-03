@@ -8,6 +8,7 @@ import {
 
 // import HomePage from "./pages/HomePage";
 import { Months } from "./pages/Months";
+import { HomeScreen } from "./pages/HomeScreen";
 
 function App() {
   return (
@@ -19,8 +20,8 @@ function App() {
         <Route path="/list">
           <div>Hello</div>
         </Route>
-        <Route path="/topics">
-          <Months />
+        <Route path="/home">
+          <HomeScreen />
         </Route>
         <Route path="/" >
           <Months />
