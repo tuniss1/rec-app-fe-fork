@@ -8,6 +8,7 @@ import {
 
 import HomePage from "./pages/HomePage";
 import { Months } from "./pages/Months";
+import { HomeScreen } from "./pages/HomeScreen";
 
 function App() {
   return (
