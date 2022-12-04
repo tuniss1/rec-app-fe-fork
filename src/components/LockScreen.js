@@ -22,10 +22,10 @@ const LockScreen = ({ passcode, setPasscode, setIsAuthenticated }) => {
       </div>
       <div className='px-[64px] w-full grid grid-cols-3 gap-y-5 gap-x-6 mt-6 justify-center'>
         {[1, 2, 3, 4, 5, 6, 7, 8, 9, 0].map((value) => {
-          return <div className={`w-14 h-14 justify-self-center relative border-[rgba(255,255,255,0.3)] rounded-full border-2 bg-black transition-[background,border] active:bg-white active:border-white ${value === 0 ? ' col-start-2' : ''}`} key={value} onClick={() => {
+          return <div className={`w-[78px] h-[78px] flex items-center justify-center justify-self-center relative border-[rgba(255,255,255,0.3)] rounded-full border-2 bg-black transition-[background,border] active:bg-white active:border-white ${value === 0 ? ' col-start-2' : ''}`} key={value} onClick={() => {
             setPasscode(passcode + value)
           }}>
-            <p className='text-white align-middle text-center p-[13px] text-2xl leading-none'>{value}</p>
+            <p className='text-white align-middle text-center text-2xl leading-none'>{value}</p>
             {/* <div className='absolute w-full h-full' ></div> */}
           </div>
         })}
