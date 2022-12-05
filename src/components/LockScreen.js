@@ -2,13 +2,14 @@ import React from 'react'
 
 const LockScreen = ({ passcode, setPasscode, setIsAuthenticated }) => {
   const PASSCODE_LENGTH = [1, 2, 3, 4];
+  const newLocal = 'passcode-logo.png';
   return (
     <div className='w-full h-screen bg-black pt-12 overflow-y-auto'>
       <div className=''>
         <img src='2.png' className='h-21 w-20 mx-auto' alt='logo' />
       </div>
       <div className='mt-5'>
-        <img src='passcode-logo.png' className='w-[245px] h-[88px] mx-auto bg-contain' alt='passcode-logo' />
+        <img src={newLocal} className='w-[245px] h-[88px] mx-auto bg-contain' alt='passcode-logo' />
       </div>
       <div className='mt-4 w-fit mx-auto flex' style={{
       }} id='bounce'>

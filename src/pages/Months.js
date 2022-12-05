@@ -15,10 +15,6 @@ import notes from '../data/data';
 
 let [...arr] = notes;
 
-
-const listRef = ref(storage, 'rec');
-
-
 // Find all the prefixes and items.
 // listAll(listRef)
 //     .then((res) => {
@@ -72,6 +68,7 @@ export const Months = () => {
                                 // console.log(i.length >= 10 ? i.id : `0${i.id}`)
                                 if (i.id <= 11) {
                                     return (
+                                        // eslint-disable-next-line react/jsx-key
                                         <a className=" mobile:w-[126px] mobile:h-[126px] medium-mobile:w-[130px] medium-mobile:h-[130px] md:w-[140px] md:h-[140px] flex items-center justify-center flex-col sm:py-2 px-2 sm:px-4 text-center bg-transparent mr-0 mt-0 font-bold border-black border-[1px] rounded-lg bg-red-600 text-white hover:border-transparent transition ease-in duration-200 transform hover:-translate-y-1 active:translate-y-0 "
                                             href={`https://firebasestorage.googleapis.com/v0/b/rec-app-803db.appspot.com/o/rec%2FBusiness-Result-${i.id >= 10 ? i.id : `0${i.id}`}-2022.pdf?alt=media&token=95ece86a-0137-496b-b5f0-cbd3a603dfbc`}
                                         >
@@ -80,6 +77,7 @@ export const Months = () => {
                                         </a>
                                     )
                                 }
+                                // eslint-disable-next-line react/jsx-key
                                 return (<a className=" mobile:w-[126px] mobile:h-[126px] medium-mobile:w-[130px] medium-mobile:h-[130px] md:w-[140px] md:h-[140px] flex items-center justify-center flex-col sm:py-2 px-2 sm:px-4 text-center bg-transparent mr-0 mt-0 font-bold border-black border-[1px] rounded-lg bg-slate-50 text-gray-300 hover:border-transparent transition ease-in duration-200 transform hover:-translate-y-1 active:translate-y-0 "
                                     href={`/months`}
                                 >
@@ -95,35 +93,4 @@ export const Months = () => {
 
     )
 }
-function Topic() {
-    let { topicId } = useParams();
-    console.log(topicId)
-    let i = topicId.length == 2 ? topicId : "0" + topicId;
-    return <a href={`https://firebasestorage.googleapis.com/v0/b/rec-app-803db.appspot.com/o/rec%2FBusiness-Result-${i}-2022.pdf?alt=media&token=95ece86a-0137-496b-b5f0-cbd3a603dfbc`}>Link</a>
-}
-function Month() {
-    let { topicId } = useParams();
 
-    getDownloadURL(ref(storage, 'rec/Business-Result-01-2022.pdf'))
-        .then((url) => {
-            // `url` is the download URL for 'images/stars.jpg'
-            console.log("here");
-            console.log(url);
-            return <h3>Requested topic ID: {url}</h3>;
-            // // This can be downloaded directly:
-            // const xhr = new XMLHttpRequest();
-            // xhr.responseType = 'blob';
-            // xhr.onload = (event) => {
-            //     const blob = xhr.response;
-            // };
-            // xhr.open('GET', url);
-            // xhr.send();
-
-            // // Or inserted into an <img> element
-            // const img = document.getElementById('myimg');
-            // img.setAttribute('src', url);
-        })
-        .catch((error) => {
-            // Handle any errors
-        });
-}

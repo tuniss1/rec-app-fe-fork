@@ -1,7 +1,6 @@
 import React, { useEffect, useState, } from "react";
 
 import rec_logo from "../img/rec_logo.png";
-import { Link } from "react-router-dom";
 import LockScreen from "../components/LockScreen";
 
 function HomePage() {
