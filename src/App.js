@@ -8,8 +8,6 @@ import {
 import AddStockPage from "./pages/AddStockPage";
 
 import HomePage from "./pages/HomePage";
-import { Months } from "./pages/Months";
-import { HomeScreen } from "./pages/HomeScreen";
 
 function App() {
   return (
@@ -26,8 +24,4 @@ function App() {
   );
 }
 
-function Topic() {
-  let { topicId } = useParams();
-  return <h3>Requested topic ID: {topicId}</h3>;
-}
 export default App;
