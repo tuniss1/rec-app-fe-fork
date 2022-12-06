@@ -1,11 +1,6 @@
+/* eslint-disable no-unused-vars */
 import React from "react";
-import {
-    BrowserRouter as Router,
-    Switch,
-    Route,
-    useRouteMatch,
-    useParams
-} from "react-router-dom";
+import { useRouteMatch, BrowserRouter, Switch, Route } from "react-router-dom";
 
 import { ref, getDownloadURL } from "firebase/storage";
 
@@ -55,7 +50,7 @@ export const Months = () => {
             // Handle any errors
         });
     return (
-        <Router>
+        <BrowserRouter>
             <Switch>
                 {/* <Route path={`${match.url}/:topicId`}>
                     <Topic />
@@ -89,7 +84,7 @@ export const Months = () => {
                     </div>
                 </Route>
             </Switch>
-        </Router >
+        </BrowserRouter >
 
     )
 }
