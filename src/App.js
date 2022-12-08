@@ -3,11 +3,11 @@ import {
   BrowserRouter as Router,
   Switch,
   Route,
-  useParams,
 } from "react-router-dom";
 import AddStockPage from "./pages/AddStockPage";
-
 import HomePage from "./pages/HomePage";
+import MainScreen from "./pages/MainScreen";
+import { StockScreen } from "./pages/StockScreen";
 
 function App() {
   return (
@@ -18,6 +18,12 @@ function App() {
         </Route>
         <Route exact path="/stocks/add">
           <AddStockPage />
+        </Route>
+        <Route exact path="/stock">
+          <StockScreen />
+        </Route>
+        <Route exact path="/home">
+          <MainScreen />
         </Route>
       </Switch>
     </Router>
