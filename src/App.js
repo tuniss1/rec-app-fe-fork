@@ -1,72 +1,29 @@
 import React from "react";
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  useParams
-} from "react-router-dom";
-
-// import HomePage from "./pages/HomePage";
-import { Months } from "./pages/Months";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import AddStockPage from "./pages/AddStockPage";
+import HomePage from "./pages/HomePage";
+import MainScreen from "./pages/MainScreen";
+import { StockScreen } from "./pages/StockScreen";
 
 function App() {
   return (
     <Router>
       <Switch>
         <Route exact path="/">
-          <Months />
+          <HomePage />
         </Route>
-        {/* <Route path="/list">
-          <div>Hello</div>
-        </Route> */}
-        <Route path="/topics">
-          <Months />
+        <Route exact path="/stocks/add">
+          <AddStockPage />
         </Route>
-        <Route path="/" >
-          <Months />
+        <Route exact path="/stock">
+          <StockScreen />
+        </Route>
+        <Route exact path="/home">
+          <MainScreen />
         </Route>
       </Switch>
     </Router>
-
   );
 }
 
-// function Topics() {
-//   let match = useRouteMatch();
-
-//   return (
-//     <div>
-//       <h2>Topics</h2>
-
-//       {/* <ul>
-//         <li>
-//           <Link to={`${match.url}/components`}>Components</Link>
-//         </li>
-//         <li>
-//           <Link to={`${match.url}/props-v-state`}>
-//             Props v. State
-//           </Link>
-//         </li>
-//       </ul> */}
-
-//       {/* The Topics page has its own <Switch> with more routes
-//           that build on the /topics URL path. You can think of the
-//           2nd <Route> here as an "index" page for all topics, or
-//           the page that is shown when no topic is selected */}
-//       <Switch>
-//         <Route path={`${match.path}/:topicId`}>
-//           <Topic />
-//         </Route>
-//         <Route path={match.path}>
-//           <h3>Please select a topic.</h3>
-//         </Route>
-//       </Switch>
-//     </div>
-//   );
-// }
-
-function Topic() {
-  let { topicId } = useParams();
-  return <h3>Requested topic ID: {topicId}</h3>;
-}
 export default App;

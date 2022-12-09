@@ -2,16 +2,55 @@
 @tailwind components;
 @tailwind utilities;
 
-/* body {
+/* body,
+html {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
+  overflow: hidden;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+
+  -webkit-touch-callout: none;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+} */
+
+@keyframes wobble {
+  0% {
+    transform: translateX(0%);
+  }
+  20% {
+    transform: translateX(-20px);
+  }
+  40% {
+    transform: translateX(15px);
+  }
+  60% {
+    transform: translateX(-10px);
+  }
+  80% {
+    transform: translateX(5px);
+  }
+  100% {
+    transform: translateX(0%);
+  }
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-} */
+@layer components {
+  .border-style {
+    @apply rounded-[12px] border-[2px] border-[#3E3E3E];
+  }
+
+  .stock-card-l {
+    @apply flex flex-col items-center justify-center w-[175px] h-[170px] border-[2px] border-r-[1px] rounded-[12px] rounded-tr-none rounded-br-none border-[#3E3E3E];
+  }
+  .stock-card-r {
+    @apply flex flex-col items-center justify-center w-[175px] h-[170px] border-[2px] border-l-[1px] rounded-[12px] rounded-tl-none rounded-bl-none border-[#3E3E3E];
+  }
+}
